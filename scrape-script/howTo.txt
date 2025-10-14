@@ -1,0 +1,15 @@
+# cd to folder
+cd ./scrape-script
+
+# Create a virtual environment
+python3 -m venv venv
+
+# Activate it
+source venv/bin/activate
+
+# Now install beautifulsoup4 & requests
+pip install beautifulsoup4
+pip install requests
+
+# Done Working
+deactivate
