@@ -57,52 +57,52 @@ export default function InstagramFeed() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Profile Header */}
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="flex items-center gap-8 mb-8">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-1">
-            <div className="w-full h-full rounded-full bg-black flex items-center justify-center text-4xl font-bold">
-              <img className='h-12' src={"./DNALogo-2.PNG"}/>
+      <div className="max-w-4xl mx-auto px-4 py-6 md:py-8">
+        <div className="flex items-center gap-4 md:gap-8 mb-6 md:mb-8">
+          <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-1 flex-shrink-0">
+            <div className="w-full h-full rounded-full bg-black flex items-center justify-center">
+              <img className='h-8 sm:h-10 md:h-12' src={"./DNALogo-2.PNG"} alt="DNA Auto Source Logo"/>
             </div>
           </div>
           
-          <div className="flex-1">
-            <div className="flex items-center gap-4 mb-4">
-              <h1 className="text-2xl font-light">{firstPost.ownerUsername}</h1>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 md:gap-4 mb-3 md:mb-4">
+              <h1 className="text-lg sm:text-xl md:text-2xl font-light truncate">{firstPost.ownerUsername}</h1>
               <a
                 href="https://www.instagram.com/dnaautosource/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-500 hover:bg-blue-600 px-6 py-1.5 rounded-lg font-semibold text-sm transition"
+                className="bg-blue-500 hover:bg-blue-600 px-4 md:px-6 py-1 md:py-1.5 rounded-lg font-semibold text-xs md:text-sm transition flex-shrink-0"
               >
                 Follow
               </a>
             </div>
             
-            <div className="flex gap-8 mb-4">
+            <div className="flex gap-4 md:gap-8 mb-3 md:mb-4 text-sm md:text-base">
               <div>
-                <span className="font-semibold">72</span> posts
+                <span className="font-semibold">72</span> <span className="hidden xs:inline">posts</span>
               </div>
               <div>
-                <span className="font-semibold">176</span> followers
+                <span className="font-semibold">176</span> <span className="hidden xs:inline">followers</span>
               </div>
               <div>
-                <span className="font-semibold">223</span> following
+                <span className="font-semibold">223</span> <span className="hidden xs:inline">following</span>
               </div>
             </div>
             
-            <div>
+            <div className="text-sm md:text-base">
               <p className="font-semibold">{firstPost.ownerFullName}</p>
-              <p className="text-gray-400 text-sm">Automotive Service</p>
-              <p className="mt-2">🔎 Automotive Sourcing Specialists</p>
-              <p>🔩 PARTS | ACCESSORIES 🏁 | VEHICLES 🏎️</p>
-              <p>📍Proudly Canadian 🇨🇦 Serving the World 🌍</p>
+              <p className="text-gray-400 text-xs md:text-sm">Automotive Service</p>
+              <p className="mt-1 md:mt-2 text-xs md:text-base">🔎 Automotive Sourcing Specialists</p>
+              <p className="text-xs md:text-base">🔩 PARTS | ACCESSORIES 🏁 | VEHICLES 🏎️</p>
+              <p className="text-xs md:text-base">📍Proudly Canadian 🇨🇦 Serving the World 🌍</p>
             </div>
           </div>
         </div>
 
         {/* Posts Grid */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="grid grid-cols-3 gap-1">
+        <div className="border-t border-gray-800 pt-6 md:pt-8">
+          <div className="grid grid-cols-3 gap-0.5 sm:gap-1">
             {posts.map((post) => {
               const currentIndex = currentImageIndex[post.id] || 0;
               const currentImage = post.images[currentIndex] || post.displayUrl;
@@ -119,6 +119,10 @@ export default function InstagramFeed() {
                     preloadPostImages(post);
                   }}
                   onMouseLeave={() => setHoveredPostId(null)}
+                  onTouchStart={() => {
+                    setHoveredPostId(post.id);
+                    preloadPostImages(post);
+                  }}
                 >
                   <img
                     src={`https://images.weserv.nl/?url=${encodeURIComponent(currentImage)}`}
@@ -129,28 +133,28 @@ export default function InstagramFeed() {
                     }}
                   />
 
-                  {/* Navigation Arrows - Show on hover if multiple images */}
+                  {/* Navigation Arrows - Show on hover/touch if multiple images */}
                   {hoveredPostId === post.id && post.images.length > 1 && (
                     <>
                       <button
                         onClick={(e) => handlePrevImage(e, post.id, post.images.length)}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-1.5 transition z-10"
+                        className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-1 sm:p-1.5 transition z-10"
                       >
-                        <ChevronLeft className="w-4 h-4 text-black" />
+                        <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4 text-black" />
                       </button>
                       <button
                         onClick={(e) => handleNextImage(e, post.id, post.images.length)}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-1.5 transition z-10"
+                        className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-1 sm:p-1.5 transition z-10"
                       >
-                        <ChevronRight className="w-4 h-4 text-black" />
+                        <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-black" />
                       </button>
                       
                       {/* Dot indicators */}
-                      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
+                      <div className="absolute bottom-1 sm:bottom-2 left-1/2 -translate-x-1/2 flex gap-0.5 sm:gap-1 z-10">
                         {post.images.map((_, idx) => (
                           <div
                             key={idx}
-                            className={`w-1.5 h-1.5 rounded-full transition ${
+                            className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full transition ${
                               idx === currentIndex ? 'bg-white' : 'bg-white/50'
                             }`}
                           />

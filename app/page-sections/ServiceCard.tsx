@@ -48,9 +48,19 @@ export function ServiceCard() {
   return (
     <section id="services" className="bg-white">
       {/* Top Section - Tabs and Content with Image */}
-      <div className="grid lg:grid-cols-2 lg:min-h-[50vh]">
-        {/* Left Side - Text Content */}
-        <div className="bg-white p-8 md:p-16 flex flex-col justify-center">
+      <div className="grid md:grid-cols-2 md:min-h-[50vh]">
+        {/* Image Side - Left on desktop, Bottom on mobile */}
+        <div className="relative h-96 md:h-full order-2 md:order-1">
+          <Image
+            src={tabContent[activeTab].image}
+            alt={tabContent[activeTab].imageAlt}
+            fill
+            className="object-cover transition-opacity duration-300"
+          />
+        </div>
+
+        {/* Text Content Side - Right on desktop, Top on mobile */}
+        <div className="bg-white p-8 md:p-16 flex flex-col justify-center order-1 md:order-2">
           <h2 className="text-sm font-semibold text-gray-500 mb-2">Our Services</h2>
           <h3 className="text-3xl md:text-4xl font-bold text-black mb-6">
             Driven by Expertise, Precision in Every Strand
@@ -88,18 +98,7 @@ export function ServiceCard() {
             </p>
           </div>
         </div>
-
-        {/* Right Side - Image */}
-        <div className="relative h-[400px] lg:h-full">
-          <Image
-            src={tabContent[activeTab].image}
-            alt={tabContent[activeTab].imageAlt}
-            fill
-            className="object-cover transition-opacity duration-300"
-          />
-        </div>
       </div>
-
     </section>
   );
 }
