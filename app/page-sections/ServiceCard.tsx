@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { FaTools, FaPaintBrush, FaCarSide } from "react-icons/fa";
 import { useState } from "react";
+import Image from "next/image";
 
 type TabId = "parts" | "accessories" | "vehicles";
 
@@ -119,7 +120,7 @@ export function ServiceCard() {
       </div>
 
       {/* Bottom Section - Three Cards */}
-      <div className="px-6 py-24 bg-gray-50">
+      <div className="px-6 py-16 bg-gray-50">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <Card key={index} className="bg-white border-gray-200 hover:shadow-lg transition-shadow">
