@@ -2,7 +2,7 @@ import { Mail, Instagram, FileText } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer id="footer" className="bg-white border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column */}
