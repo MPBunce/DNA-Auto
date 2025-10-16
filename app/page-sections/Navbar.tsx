@@ -12,8 +12,8 @@ export function Navbar() {
         <h1>DNA Auto Source</h1>
       </Link>
       <div className="flex items-center space-x-6">
-        <Link href="/">Home</Link>
-        <Link href="/">Services</Link>
+        <Link href="/#about">About</Link>
+        <Link href="/#services">Services</Link>
         <Link href="mailto:dnaautosource@gmail.com">Email</Link>
         <Button variant="default" className="ml-2">
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdWKgsSi188YHn0mxofNgdklR1E4aJADlrLF1zUBPR0yzIxXA/viewform">Make a Request</Link>
