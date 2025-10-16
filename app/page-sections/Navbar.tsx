@@ -13,20 +13,20 @@ export function Navbar() {
       </Link>
       <div className="flex items-center space-x-6">
         <Link href="/">Home</Link>
-        <Link href="/services">Services</Link>
+        <Link href="/">Services</Link>
         <DropdownMenu>
           <DropdownMenuTrigger className="text-sm">Contact Us</DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuItem>
-              <Link href="/">Email</Link>
+              <Link href="mailto:dnaautosource@gmail.com">Email</Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="/">Phone</Link>
+              <Link href="tel:+1800229933">Phone</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
         <Button variant="default" className="ml-2">
-          <Link href="/">Make a Request</Link>
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdWKgsSi188YHn0mxofNgdklR1E4aJADlrLF1zUBPR0yzIxXA/viewform">Make a Request</Link>
         </Button>
       </div>
     </nav>
