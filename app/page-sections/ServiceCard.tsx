@@ -1,6 +1,5 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -45,24 +44,6 @@ export function ServiceCard() {
       imageAlt: "Luxury sports car"
     },
   };
-
-  const features = [
-    {
-      title: "Unlocking Possibilities",
-      description:
-        "Our differentiator is our commitment to sourcing the most elusive items, taking pride in achieving the impossible. We turn 'can't be done' into reality, making your automotive dreams our mission.",
-    },
-    {
-      title: "Global Reach, Local Feel",
-      description:
-        "With a global reach, DNA Auto Source maintains a personalized local touch. You're not just a client, but a valued part of our automotive family, benefiting from our unwavering dedication to your satisfaction and competitive pricing. Compare competitor quotes and experience the DNA pricing difference.",
-    },
-    {
-      title: "Experience the DNA Auto-Source Difference",
-      description:
-        "Join countless satisfied customers who have experienced the DNA Auto Source difference firsthand. DNA Auto Source is your partner in the automotive journey. Contact us today and let's embark on this exciting road together.",
-    },
-  ];
 
   return (
     <section id="services" className="bg-white">
