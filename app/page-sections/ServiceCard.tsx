@@ -48,7 +48,7 @@ export function ServiceCard() {
   return (
     <section id="services" className="bg-white">
       {/* Top Section - Tabs and Content with Image */}
-      <div className="grid lg:grid-cols-2">
+      <div className="grid lg:grid-cols-2 lg:min-h-[50vh]">
         {/* Left Side - Text Content */}
         <div className="bg-white p-8 md:p-16 flex flex-col justify-center">
           <h2 className="text-sm font-semibold text-gray-500 mb-2">Our Services</h2>
@@ -90,7 +90,7 @@ export function ServiceCard() {
         </div>
 
         {/* Right Side - Image */}
-        <div className="relative h-[50vh] min-h-[400px]">
+        <div className="relative h-[400px] lg:h-full">
           <Image
             src={tabContent[activeTab].image}
             alt={tabContent[activeTab].imageAlt}
