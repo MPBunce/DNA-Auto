@@ -119,19 +119,6 @@ export function ServiceCard() {
         </div>
       </div>
 
-      {/* Bottom Section - Three Cards */}
-      <div className="px-6 py-16 bg-gray-50">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {features.map((feature, index) => (
-            <Card key={index} className="bg-white border-gray-200 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 space-y-4">
-                <h3 className="text-xl font-bold text-black">{feature.title}</h3>
-                <p className="text-gray-800 leading-relaxed">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }
