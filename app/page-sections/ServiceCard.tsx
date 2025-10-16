@@ -1,7 +1,6 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card";
-import { FaTools, FaPaintBrush, FaCarSide } from "react-icons/fa";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -27,7 +26,7 @@ export function ServiceCard() {
     parts: {
       title: "Parts: Reviving your ride piece by piece",
       description:
-        "Parts sourcing for all vehicle makes and models. Our differentiator is our commitment to sourcing the most elusive items, taking pride in achieving the impossible. We turn 'can't be done' into reality, making your automotive dreams our mission.",
+        "Parts sourcing for all vehicle makes and models. Our differentiator is our commitment to sourcing the most elusive items, taking pride in achieving the impossible. We turn &apos;can&apos;t be done&apos; into reality, making your automotive dreams our mission.",
       image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=80",
       imageAlt: "Car engine parts and components"
     },
@@ -41,7 +40,7 @@ export function ServiceCard() {
     vehicles: {
       title: "Vehicles: Uncover your dream ride",
       description:
-        "Search no more for your ideal vehicle. With a global reach, DNA Auto Source maintains a personalized local touch. You're not just a client, but a valued part of our automotive family, benefiting from our unwavering dedication to your satisfaction and competitive pricing.",
+        "Search no more for your ideal vehicle. With a global reach, DNA Auto Source maintains a personalized local touch. You&apos;re not just a client, but a valued part of our automotive family, benefiting from our unwavering dedication to your satisfaction and competitive pricing.",
       image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&q=80",
       imageAlt: "Luxury sports car"
     },
@@ -110,11 +109,12 @@ export function ServiceCard() {
         </div>
 
         {/* Right Side - Image */}
-        <div className="relative h-96 md:h-[32rem]">
-          <img
+        <div className="relative h-[50vh] min-h-[400px]">
+          <Image
             src={tabContent[activeTab].image}
             alt={tabContent[activeTab].imageAlt}
-            className="w-full h-full object-cover transition-opacity duration-300"
+            fill
+            className="object-cover transition-opacity duration-300"
           />
         </div>
       </div>

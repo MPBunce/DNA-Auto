@@ -11,7 +11,7 @@ export default function Footer() {
               Your Journey Begins Here
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              We understand that every vehicle has a story to tell, and we're here to help you write the next chapter. By providing us with a few key details, you're taking the first step towards transforming your automotive aspirations into tangible results.
+              We understand that every vehicle has a story to tell, and we&apos;re here to help you write the next chapter. By providing us with a few key details, you&apos;re taking the first step towards transforming your automotive aspirations into tangible results.
             </p>
             <p className="text-gray-900 font-semibold">
               Contact us today, we look forward to hearing from you! Let us help you find that missing piece.
