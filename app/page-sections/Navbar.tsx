@@ -18,15 +18,15 @@ export function Navbar() {
           <DropdownMenuTrigger className="text-sm">Contact Us</DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuItem>
-              <Link href="/contact/email">Email</Link>
+              <Link href=".">Email</Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="/contact/phone">Phone</Link>
+              <Link href="/">Phone</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
         <Button variant="default" className="ml-2">
-          <Link href="/request">Make a Request</Link>
+          <Link href="/">Make a Request</Link>
         </Button>
       </div>
     </nav>
