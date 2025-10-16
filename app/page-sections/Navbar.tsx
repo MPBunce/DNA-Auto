@@ -14,17 +14,7 @@ export function Navbar() {
       <div className="flex items-center space-x-6">
         <Link href="/">Home</Link>
         <Link href="/">Services</Link>
-        <DropdownMenu>
-          <DropdownMenuTrigger className="text-sm">Contact Us</DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem>
-              <Link href="mailto:dnaautosource@gmail.com">Email</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="tel:+1800229933">Phone</Link>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Link href="mailto:dnaautosource@gmail.com">Email</Link>
         <Button variant="default" className="ml-2">
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdWKgsSi188YHn0mxofNgdklR1E4aJADlrLF1zUBPR0yzIxXA/viewform">Make a Request</Link>
         </Button>
