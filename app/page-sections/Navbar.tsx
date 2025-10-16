@@ -18,7 +18,7 @@ export function Navbar() {
           <DropdownMenuTrigger className="text-sm">Contact Us</DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuItem>
-              <Link href=".">Email</Link>
+              <Link href="/">Email</Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <Link href="/">Phone</Link>
