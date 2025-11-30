@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 export function Navbar() {
@@ -12,7 +13,7 @@ export function Navbar() {
     <nav className="bg-white shadow">
       <div className="flex justify-between items-center px-6 py-2">
         <Link href="/" className="text-lg font-bold flex flex-row items-center">
-          <img className='h-12' src={"./DNALogo-2.PNG"} alt="DNA Auto Source Logo"/>
+          <Image className='h-12' src={"./DNALogo-2.PNG"} alt="DNA Auto Source Logo" width={48} height={48} />
           <h1>DNA Auto Source</h1>
         </Link>
 
