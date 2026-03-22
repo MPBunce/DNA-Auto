@@ -90,8 +90,8 @@ export default function InstagramFeed() {
       <div className="max-w-4xl mx-auto px-4 py-6 md:py-8">
         <div className="flex items-center gap-4 md:gap-8 mb-6 md:mb-8">
           <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-1 flex-shrink-0">
-            <div className="w-full h-full rounded-full bg-black flex items-center justify-center">
-              <Image className='h-8 sm:h-10 md:h-12' src={"./DNALogo-2.PNG"} alt="DNA Auto Source Logo" width={48} height={48} />
+            <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
+              <Image className='h-full w-auto object-contain' src={"./DNALogo-2.PNG"} alt="DNA Auto Source Logo" width={120} height={120} />
             </div>
           </div>
           

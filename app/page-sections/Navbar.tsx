@@ -13,7 +13,7 @@ export function Navbar() {
     <nav className="bg-white shadow">
       <div className="flex justify-between items-center px-6 py-2">
         <Link href="/" className="text-lg font-bold flex flex-row items-center">
-          <Image className='h-12' src={"./DNALogo-2.PNG"} alt="DNA Auto Source Logo" width={48} height={48} />
+          <Image className='h-12 w-auto' src={"./DNALogo-2.PNG"} alt="DNA Auto Source Logo" width={120} height={48} />
           <h1>DNA Auto Source</h1>
         </Link>
 
